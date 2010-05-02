@@ -2,3 +2,58 @@
 layout: master
 title: The Midway of Unpredictability
 ---
+<a href="http://github.com/wickedshimmy"><img id="github-ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub" /></a>
+
+<div id="navigation">
+  <ul class="menu-items">
+    <li><a href="/bio">About</a></li>
+    <li><a href="#">Articles</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="#">Photos</a></li>
+    <li><a href="#">Physics</a></li>
+    <li><a href="#">Software</a></li>
+  </ul>
+</div>
+
+<h1>The Midway of Unpredictability</h1>
+
+<blockquote>
+  <p>It is characteristic of all deep human problems that they are not to be approached without some humor and some bewilderment.</p>
+  <cite>Freeman Dyson, <em>Disturbing the Universe</em>, 1979.</cite>
+</blockquote>
+
+<img src="images/hq.jpg" alt="Matt at the Chocolate Company, Luxembourg City, Luxembourg. 14 February 2009" />
+<h2><span id="first-name">Matt</span><span id="last-name">Enright</span></h2>
+<p class="caption">Photo &copy; Molly Rupert 2009. Used with permission.</p>
+
+<h3>Welcome</h3>
+<p>I am a a student of <strong>physics</strong> and of <strong>mathematics</strong>, an enthusiast of <strong>computer science</strong> and of <strong>literature</strong>, and an admirer of <strong>brilliance</strong> and <strong>beauty</strong>.</p>
+<p>And I'd like to share my humor and my bewilderment.</p>
+<p>If you happen to be interested in a semi-regular column of sorts: <a href="/blog">you're looking for this</a>. <em>Caveat emptor</em>, the scope, like the quality and frequency of posting, varies wildly, but most recently it was 
+  {% for recent in site.posts limit:1 %}
+    <strong><a href="{{ recent.url }}">{{ recent.title }}</a></strong>, posted on <strong>{{ recent.date | date: "%d %B %Y" }}</strong>
+  {% endfor %}.
+</p>
+
+
+<h4>The man behind the curtain.</h4>
+<p></p>
+<p>There's a bit more information, if that sort of thing is your bag, baby, <a href="/bio">right this way</a>. If you'd like to hire, bribe, or stalk him, that's also a good place to start. If your intentions are more sinister in nature, probably best to take it to <a href="mailto:awickedshimmy@gmail.com">email</a>.</p>
+
+<h4>About this site</h4>
+
+<p>This site is powered by <a href="http://jekyllrb.com">Jekyll</a>, a static site generator written by <a href="http://tom.preston-werner.com">Tom Preston-Werner</a> and maintained by <a href="http://litanyagainstfear.com">Nick Quaranto</a>, and GitHub pages, a hosted service based on Jekyll. In designing the site, I leaned heavily on <a href="http://compass-styles.org">Compass</a>, the <abbr title="Cascading Style Sheets">CSS</abbr> framework which has rapidly made itself indispensable around me and my projects. As a consequence of this, the styles are written by me in <a href="http://sass-lang.com">Sass</a>, then compiled locally into CSS stylesheets with a post-commit hook. Blueprint, Baseline and Sass, and fancied with jQuery and jQuery UI.</p>
+
+<p>As this is not in any way a "production" site but a personal dalliance, I have felt free to use HTML5 and CSS3 to the extent to which they are useful or interesting to me. Everything looks fine in Firefox 3.6 on Linux, and I've made cursory attempts to verify that its not a crime scene in Epiphany (Webkit) on Linux and also in Safari on the Mac. If it does not look usable - nay, <em>stunning</em> - I can only urge you to support modern web standards and use a compliant browser.</p>
+
+<script type="text/javascript" src="scripts/jquery.tweet.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".tweet").tweet({
+      username: "wickedshimmy",
+      avatar_size: null,
+      count: 4,
+      loading_text: "loading tweets..."
+    });
+  });
+</script>
